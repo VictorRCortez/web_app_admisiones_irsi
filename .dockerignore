@@ -1,0 +1,32 @@
+# Ignorar cachés de Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignorar carpetas de pruebas (si no las usas en producción)
+test/
+
+# Ignorar archivos de logs
+*.log
+logs/
+
+# Archivos de entorno y configuración local
+.env
+.flaskenv
+
+# Archivos y carpetas de control de versiones
+.git/
+.gitignore
+
+# Archivos de editores de texto
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros directorios que no quieres incluir en producción
+MSSQL/
