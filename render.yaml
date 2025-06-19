@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: web_app_admisiones_irsi
+    env: docker
+    plan: free
+    autoDeploy: true
+
+    
+
+
