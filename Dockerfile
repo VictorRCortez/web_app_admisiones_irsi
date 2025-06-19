@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Instala dependencias del sistema y el driver ODBC 18 desde repositorio Ubuntu 20.04
+# Agregar ODBC Driver 18 para SQL Server
 RUN apt-get update && \
    apt-get install -y curl gnupg apt-transport-https && \
    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
@@ -14,6 +14,7 @@ RUN apt-get update && \
    ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev && \
    apt-get clean && \
    rm -rf /var/lib/apt/lists/*
+
 
 # Instala las dependencias de Python
 COPY requirements.txt .
